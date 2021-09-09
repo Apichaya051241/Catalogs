@@ -18,12 +18,10 @@ const UploadComponent = ({  }) => {
         .then(({ thumbnail }) => thumbnail);
     },
   };
-  return (   
-    <div>
+  return (       
     <Upload {...props}   >        
-    <Button icon={<UploadOutlined />} style={{  width: 180,  position:'unset', padding: '1 00px',float: "center"} } >Upload</Button>
+    <Button icon={<UploadOutlined />}  >Upload</Button>
   </Upload>
-  </div>
   );
 };
 
