@@ -3,8 +3,9 @@ import { Table } from "antd";
 import { Button } from "antd";
 import { useRouter } from "next/router";
 import DrawerComponent from "../../../component/drawer";
-import { styles } from "ansi-colors";
-import Item from "antd/lib/list/Item";
+import styles from "../../../styles/Home.module.css";
+import HeadshowComponent from "../../../component/headshow";
+
 
 
 const Show = () => {
@@ -89,6 +90,7 @@ const Show = () => {
   
   return (
     <div>
+      <HeadshowComponent />
       <Button
         color="blue"
         shape="round"
@@ -104,9 +106,11 @@ const Show = () => {
       <h4>All Data</h4>
       <p></p>
 
-      <Table className={styles.table}
+      <Table
+        // className={styles.table}
         columns={columns}
-        dataSource={newdata} />
+        dataSource={newdata}
+      />
       <p></p>
 
       <DrawerComponent
