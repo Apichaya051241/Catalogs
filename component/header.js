@@ -1,18 +1,19 @@
 import styles from '../styles/Home.module.css'
 import SearchComponent from './search';
-
-
-
-  
+import TabComponent from './tab';
  
-const HeadComponent = ({  }) => {
-    
+const HeadComponent = ({ }) => {
+
   return (
-    <head className={styles.header}>
-      <div className={styles.div}>
-        <SearchComponent />
-      </div>
-    </head>
+    (<div className={styles.divA}></div>),
+    (
+      <head className={styles.header}>
+        <div className={styles.div}>
+          <SearchComponent />
+          <TabComponent />
+        </div>
+      </head>
+    )
   );
 };
 

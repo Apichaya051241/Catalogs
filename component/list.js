@@ -1,7 +1,5 @@
 import { List, Avatar } from 'antd';
 import { useRouter } from 'next/router';
-
-
   
  
 const ListComponent = ({  }) => {
@@ -47,8 +45,7 @@ const ListComponent = ({  }) => {
           title: 'sku10',
           description:'V-Moda Memory Cushions M-100 No-package',
         },
-      ];
-      
+      ];      
     
   return (
     <List

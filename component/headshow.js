@@ -2,8 +2,6 @@ import styles from "../styles/Home.module.css";
 import { Button } from "antd";
 import { useRouter } from "next/router";
 
-
-
 const HeadshowComponent = ({ }) => {
     
     const router = useRouter();

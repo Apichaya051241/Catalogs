@@ -7,7 +7,6 @@ import styles from "../../../styles/Home.module.css";
 import HeadshowComponent from "../../../component/headshow";
 
 
-
 const Show = () => {
   const [product, setProduct] = useState();
   const [newdata, setNewdata] = useState();
@@ -86,7 +85,6 @@ const Show = () => {
       color: "black",
     },
   ];
-
   
   return (
     <div>
