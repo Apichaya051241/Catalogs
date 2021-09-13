@@ -1,6 +1,7 @@
   
-import { Upload, Button } from 'antd';
+import { Upload, Button,Card } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
+import styles from "../../styles/Home.module.css";
 
 
 const UploadComponent = ({  }) => {
@@ -9,7 +10,7 @@ const UploadComponent = ({  }) => {
     listType: 'picture',
     previewFile(file) {
       console.log('Your upload file:', file);
-      // Your process logic. Here we just mock to the same file
+     
       return fetch('https://next.json-generator.com/api/json/get/4ytyBoLK8', {
         method: 'POST',
         body: file,
@@ -18,10 +19,18 @@ const UploadComponent = ({  }) => {
         .then(({ thumbnail }) => thumbnail);
     },
   };
-  return (       
-    <Upload {...props}   >        
-    <Button icon={<UploadOutlined />}  >Upload</Button>
-  </Upload>
+
+  return (
+    <div className={styles.divB}>
+      <Card bordered={false} style={{ width: 170}}>
+        <text >Click to upload file</text>        
+        <Upload {...props}>
+          <Button size="middle" icon={<UploadOutlined />}>
+            Upload
+          </Button>
+        </Upload>
+      </Card>
+    </div>
   );
 };
 

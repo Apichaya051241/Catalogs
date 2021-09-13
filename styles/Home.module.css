@@ -28,10 +28,10 @@
   background-color:white;
 }
 
-.headershow {
-  width: 100%;
-  height: 350px; 
-  color: #8c8c8c;
+.headshow {
+  width: 100%; 
+  height: 200px;
+  color: black;
 
 }
 .h1 {
@@ -55,7 +55,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://lh3.googleusercontent.com/vxGGLeCAtu1XKiK6scu6apmVpawqnKXhSR6U2dQ-CYYD7NMAhWjuTl-ubdSimrV7vJ5HYjA_mdW5XHn8Sog0JWL9w1C80QNAY4SRsVOCitGlYa_iRis8bzMHc0WnARW2_GDGAI4uGC10Ls9HQJsHAYgXakjqph6IASSRQ5ZjHlJPjs03kDeVczYEs3vLvus2lTUcMJwQCLAOlFU3vT7NOURq27MI7qPumwsXSslatm2-xgelBvU4xpCplxUvKUISamnT_fh3TFlhc5eD5FmFcQuWuLRQx5_EsvOlIdhLtWE6Ike51yNUdLJCEbnWReZdf6t_-jnppVqARz755aloXkFgTxuqZA1h6IyPOg3XFlgk3pogYD_RYE31KUk-eSX2DrYIZ4z93ZPX0eotI3gK5inxq6qxDtF99Rlom0lmXjmrQhXUx7xj2uYzKq0Bbd1RJR9WgJyh5cajUibmXoUTApgnn8kYaIMMdzliYDChisXTZbsmEdb3WSshNZrZSZ2DYu6m3kbaicht9eTggSf1QwL2U04TXWJZl69EviUG8tvmr5rTQfeWbmRJxbRn0h_4tkh7Lyrk2IvXUvTiubi0YroMhQ_7_BIi82cgQIWlAyEtRSMro__uMZ6sW2jAIFHnI2D0_6cXESlEpZGFy840IpNc3TghU55GMQHTRrk-PaXq3lRpglY4xU0ZU79raco-Uuu5SnBPuerilQLsEikZPUU=w808-h231-no?authuser=0")
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-image: url("https://lh3.googleusercontent.com/ZDAaRWI8cUASAtmdgMdvni7Fok-c7CyWyIpS-ufsLeFugmkN_X5QclCouECORjQYWXNaupVwBmzm3rvaXiHtLW_PSY-fot2xDpiUh4DfZQf05HnZAL4OVrGWvsTdG3oukuBvbyP_kIBAqkpqAWmNbc0D33xG0-l9i0q5Z8HC4E-ouqaEDqLwTUv1Ur4n-Py4bfryclOFwtmNVh7C1CCRsQBYTUJi7bkyr0c7IZ24dNASAHoPJQMotnwLwDEga9aU1RMSk4TzpetuQ3qU_GdfTDMBnCmHyDRdoy5PH4a1C9HTzk6yg5tpOOQKGSs4JXb3Kv1oE-dRY0ip4liIfzbsT5iAgkYU6Sd1F-nYNPuD337EruyJSC00_RN8TgjniGhS8v7mczIlsjtQ6bypVcwPQSCUvgREF0zk0v9p7kg7_cCzSLVzJHfe76IvGuTJjJcAJtuUvYa22hbASIbYQ8hMP1IJmP51xWEt0GAawX1bjwiEZKg525tOuaR0ovD6PXuHbNrv6Wlp6PSTt0o8v9plVd2yoaZ8DKD70LNFvaXsufAynpB4TQs1Edg_9-Zy0LTdI4x8tn5_LaO1SYYAJsVu-BB5E8AV6yourg3spSPrm4GF-9fH4LxwY2IgG2KTYDVRgzZRQUgLw4f2-M9faJvvcAxW8KhHUNIIM1WE8yyGEBT1Yi3SAIXZBES9wigm0LNbOBtSqCVXHLJZmWOxC25zZ2E=w1640-h468-no?authuser=0")
+  
 }
 
 .divA {
@@ -70,16 +75,48 @@
  
 }
 
+.divB {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0mm;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+ 
+}
+
+.showtable {
+  width: 50%;
+  height: 100%;  
+  align-items: center;
+  background-color: black;
+ 
+ 
+}
+
+
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
-  text-align: left;
-  color: #8c8c8c;
+  text-align: left;  
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid black;
+  color: #8c8c8c;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 45%;
+}
+
+.text { 
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    padding-right: 0mm;  
+ 
 }
 
 .search{
@@ -99,9 +136,9 @@
   }
 
 .table{  
-  width: 100%;
-  margin: 20px auto;
-  border-left: 5px ;
+  width: 80%;  
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: black;
  
   }
