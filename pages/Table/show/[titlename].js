@@ -3,9 +3,8 @@ import { Table } from "antd";
 import { Button } from "antd";
 import { useRouter } from "next/router";
 import DrawerComponent from "../../../component/drawer";
+import HeadshowComponent from "../../headshow/headshow";
 import styles from "../../../styles/Home.module.css";
-import HeadshowComponent from "../../../component/headshow";
-
 
 const Show = () => {
   const [product, setProduct] = useState();
@@ -17,7 +16,9 @@ const Show = () => {
     setVisible(true);
   };
 
-  useEffect(() => {setNewdata(data)},[]);
+  useEffect(() => {
+    setNewdata(data);
+  }, []);
 
   const router = useRouter();
 
@@ -58,20 +59,24 @@ const Show = () => {
       fixed: "right",
       width: 100,
       render: (_, value) => (
-        <Button danger shape="round" width="500" onClick={() => showDrawer(value)}>
+        <Button
+          danger
+          shape="round"
+          width="500"
+          onClick={() => showDrawer(value)}
+        >
           Edit
         </Button>
       ),
     },
   ];
 
-  const saveData = (value) => {    
+  const saveData = (value) => {
     const clonedata = data;
-    const res = clonedata.filter(item => value.key !== item.key);
-    setNewdata([...res,value]);    
+    const res = clonedata.filter((item) => value.key !== item.key);
+    setNewdata([...res, value]);
   };
-  
- 
+
   const data = [
     {
       key: "1",
@@ -85,7 +90,7 @@ const Show = () => {
       color: "black",
     },
   ];
-  
+
   return (
     <div>
       <HeadshowComponent />
@@ -104,11 +109,14 @@ const Show = () => {
       <h4>All Data</h4>
       <p></p>
 
-      <Table
-        // className={styles.table}
-        columns={columns}
-        dataSource={newdata}
-      />
+      <body>
+        <Table
+          className={styles.table}
+          columns={columns}
+          dataSource={newdata}
+        />
+      </body>
+
       <p></p>
 
       <DrawerComponent
