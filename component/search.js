@@ -1,6 +1,8 @@
   
 import { Input } from 'antd';
 import styles from "../styles/Home.module.css";
+import { Button, Tooltip } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 
 const SearchComponent = ({  }) => {
@@ -16,7 +18,9 @@ const SearchComponent = ({  }) => {
         placeholder="Search Sku..."
         onSearch={onSearch}
         size="large"
+        
       />
+      
     </div>
   );
 };

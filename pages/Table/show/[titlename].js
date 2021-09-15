@@ -3,8 +3,8 @@ import { Table } from "antd";
 import { Button } from "antd";
 import { useRouter } from "next/router";
 import DrawerComponent from "../../../component/drawer";
-import HeadshowComponent from "../../headshow/headshow";
 import styles from "../../../styles/Home.module.css";
+
 
 const Show = () => {
   const [product, setProduct] = useState();
@@ -91,24 +91,29 @@ const Show = () => {
     },
   ];
 
+   
   return (
     <div>
-      <HeadshowComponent />
-      <Button
-        color="blue"
-        shape="round"
-        defaultSelectedKeys={[router.pathname]}
-        onClick={() => router.push("/")}
-        key="/"
-        padding="1rm"
-      >
-        Home
-      </Button>
+      <div className={styles.headshow}>
+        <div className={styles.divC}>
+          <Button
+            className={styles.button}
+            color="blue"
+            shape="round"
+            defaultSelectedKeys={[router.pathname]}
+            onClick={() => router.push("/")}
+            key="/"
+          >
+            Home
+          </Button>          
+        </div>
+      </div>
 
       <p></p>
       <h4>All Data</h4>
       <p></p>
 
+    <div>
       <body>
         <Table
           className={styles.table}
@@ -118,7 +123,7 @@ const Show = () => {
       </body>
 
       <p></p>
-
+    </div>
       <DrawerComponent
         visible={visible}
         setVisible={setVisible}
