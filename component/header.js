@@ -9,8 +9,12 @@ const HeadComponent = ({ }) => {
     (
       <head className={styles.header}>
         <div className={styles.div}>
-          <SearchComponent />
-          <TabComponent />
+          <div className={styles.div}>
+            <SearchComponent />
+          </div>
+          <div className={styles.divD}>
+            <TabComponent />
+          </div>
         </div>
       </head>
     )
