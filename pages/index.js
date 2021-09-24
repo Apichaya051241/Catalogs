@@ -10,9 +10,12 @@ export default function Home() {
       <HeadComponent />     
       <Content>
         <Content>
+         <div>
           <ListComponent />
+          </div>
         </Content>
       </Content>     
     </div>
   );
 }
+

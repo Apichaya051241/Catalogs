@@ -1,17 +1,35 @@
+import { Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 import styles from "../styles/Home.module.css";
-import { useRouter } from "next/router";
 
-const TabComponent = ({}) => {   
+const TabComponent = ({}) => {
+  const props = {
+    action: "//jsonplaceholder.typicode.com/posts/",
+    listType: "picture",
+    previewFile(file) {
+      console.log("Your upload file:", file);
 
-    const router = useRouter();  
+      return fetch("https://next.json-generator.com/api/json/get/4ytyBoLK8", {
+        method: "POST",
+        body: file,
+      })
+        .then((res) => res.json())
+        .then(({ thumbnail }) => thumbnail);
+    },
+  };
+
   return (   
-    <a 
-        className={styles.text}
-        onClick={() => router.push("/upload/upload")} >
-        Upload File
-      </a>    
+    <Upload {...props}>
+      <Button
+        className={styles.uploadbotton}
+        icon={<UploadOutlined />}
+        shape="round"
+        size="middle"
+      >
+        Upload
+      </Button>
+      </Upload>     
   );
 };
 
 export default TabComponent;
-

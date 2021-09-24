@@ -1,5 +1,6 @@
 import { List, Avatar } from 'antd';
 import { useRouter } from 'next/router';
+import styles from "../styles/Home.module.css";
   
  
 const ListComponent = ({  }) => {
@@ -48,22 +49,29 @@ const ListComponent = ({  }) => {
       ];      
     
   return (
-    <List
-    style={{ width: 1350,padding: "0.7rem" }  } 
-    size="large" 
     
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={item => (
-      <List.Item >
-        <List.Item.Meta    
-          defaultSelectedKeys={[router.pathname]}            
-          title={<a onClick={() => router.push('/Table/show/' + item.title)} key="/Table/show">{item.title}</a>}
-          description={item.description}
-        />
-      </List.Item>
-    )}
-  />
+    <List      
+      style={{ width: 750, padding: "2.0rem"}}
+      size="large"
+      itemLayout="horizontal"
+      dataSource={data}      
+      renderItem={(item) => (
+        <List.Item   >
+          <List.Item.Meta         
+            defaultSelectedKeys={[router.pathname]}
+            title={
+              <a 
+                onClick={() => router.push("/Table/show/" + item.title)}
+                key="/Table/show"
+              >
+                {item.title}
+              </a>
+            }
+            description={item.description}
+          />
+        </List.Item>
+      )}
+    />
   );
 };
 

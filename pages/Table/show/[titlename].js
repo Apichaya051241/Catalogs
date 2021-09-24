@@ -4,6 +4,7 @@ import { Button } from "antd";
 import { useRouter } from "next/router";
 import DrawerComponent from "../../../component/drawer";
 import styles from "../../../styles/Home.module.css";
+import { HomeOutlined } from "@ant-design/icons";
 
 
 const Show = () => {
@@ -104,8 +105,9 @@ const Show = () => {
             onClick={() => router.push("/")}
             key="/"
           >
+            <HomeOutlined />
             Home
-          </Button>          
+          </Button>
         </div>
       </div>
 
@@ -113,17 +115,17 @@ const Show = () => {
       <h4>All Data</h4>
       <p></p>
 
-    <div>
-      <body>
-        <Table
-          className={styles.table}
-          columns={columns}
-          dataSource={newdata}
-        />
-      </body>
+      <div>
+        <body>
+          <Table
+            className={styles.showtable}
+            columns={columns}
+            dataSource={newdata}
+          />
+        </body>
 
-      <p></p>
-    </div>
+        <p></p>
+      </div>
       <DrawerComponent
         visible={visible}
         setVisible={setVisible}

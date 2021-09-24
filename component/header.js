@@ -1,9 +1,8 @@
-import styles from '../styles/Home.module.css'
-import SearchComponent from './search';
-import TabComponent from './tab';
- 
-const HeadComponent = ({ }) => {
+import styles from "../styles/Home.module.css";
+import SearchComponent from "./search";
+import TabComponent from "./tab";
 
+const HeadComponent = ({}) => {
   return (
     (<div className={styles.divA}></div>),
     (
